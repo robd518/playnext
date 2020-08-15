@@ -4,7 +4,8 @@
   "description": "Game recommendation tool for you and your friends",
   "main": "app.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon",
+    "build": "tsc --project ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,15 +27,20 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "dotenv-extended": "^2.8.0",
+    "express": "^4.17.1",
     "next": "^9.5.1",
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.7",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   }
 }
