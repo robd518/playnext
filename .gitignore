@@ -117,3 +117,5 @@ dist
 .history/
 
 # Personal adds
+data
+log
