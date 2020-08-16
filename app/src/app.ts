@@ -6,13 +6,17 @@ import next from 'next'
 const port = parseInt(process.env.PORT || '3000', 10)
 const host = process.env.HOST || '0.0.0.0'
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const nextapp = next({ dev })
+const handle = nextapp.getRequestHandler()
 
-app.prepare().then(() => {
-    const server = express()
+nextapp.prepare().then(() => {
+    const app = express()
 
-    server.listen(port, host, (err) => {
+    app.all('*', (req, res) => {
+        return handle(req, res)
+    })
+
+    app.listen(port, host, (err) => {
         if (err) throw err
         console.log(`Server is listening on ${host}:${port}`)
     })
