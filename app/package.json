@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon",
+    "start": "nodemon",
     "build": "tsc --project ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
