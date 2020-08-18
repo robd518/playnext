@@ -28,10 +28,14 @@ async function main() {
     await connectToMongo()
 
     app.use(passport.initialize())
+    app.use(passport.session())
+
     app.use('/auth', steamAuthRouter)
+
     app.all('*', (req, res) => {
         return handle(req, res)
     })
+
     app.use(defaultErrorMiddleware)
 
     app.listen(port, host, (err) => {
