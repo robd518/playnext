@@ -4,11 +4,11 @@ import styled from '@emotion/styled'
 const StyledSigninButton = styled.button``
 
 const Signin = () => {
-    
+
     return (
         <StyledSigninButton
-            as="a"
-            href=""
+            as='a'
+            href='/auth/steam'
         >
             <img src="/sits_large_border.png" />
         </StyledSigninButton>
