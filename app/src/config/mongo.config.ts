@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
 
 export default {
-    'url': `${process.env.MONGO_CONNECT_URL}`
+    'url': `mongodb://${process.env.MONGO_HOST}:27017/playnext`
 }
